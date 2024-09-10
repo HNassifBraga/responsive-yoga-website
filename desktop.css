@@ -60,12 +60,12 @@ label .image{
 	right: 7.2em;
 	top: 4.5%;
 	display: inline-block;
-	background: url("./asset/ri_moon-line.png") no-repeat 0 0;
+	background: url("./assets/ri_moon-line.png") no-repeat 0 0;
 	width: 24px;
 	height: 24px;
     border: solid 1px;
 }
 
 label input:checked + .image{
-	background: url("./asset/sun.png") no-repeat 0 0;
+	background: url("./assets/sun.png") no-repeat 0 0;
 }
