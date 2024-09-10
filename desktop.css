@@ -1,0 +1,71 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: #F5F0FF;
+}
+/********* Haruka Part *************/
+
+.all-wrap{
+    width: 85%;
+    border: solid 1px red;
+    margin: 0 auto;
+}
+
+.gradation{
+    background: linear-gradient(90deg, #FF52AF,#9F53FF 100%);
+    background: -webkit-linear-gradient(0deg, #FF52AF,#9F53FF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+nav ul {
+    list-style: none;
+}
+
+.checkbox{
+    cursor: pointer;
+    position: relative;
+}
+
+.container-top{
+    height: 88px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.header-list{
+    display: flex;
+    width: 526px;
+    justify-content: space-around;
+}
+
+.checkbox-label label{ /*parent of label */
+	position: relative;
+    width: 100%;
+    height: 88px;
+}
+
+label input{ 
+	opacity: 0;
+}
+
+label .image{ 
+	position: absolute;
+	right: 7.2em;
+	top: 4.5%;
+	display: inline-block;
+	background: url("./asset/ri_moon-line.png") no-repeat 0 0;
+	width: 24px;
+	height: 24px;
+    border: solid 1px;
+}
+
+label input:checked + .image{
+	background: url("./asset/sun.png") no-repeat 0 0;
+}
