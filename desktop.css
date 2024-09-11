@@ -4,20 +4,39 @@
     margin: 0;
 }
 
+:root{
+    --title-font: "Lora", serif;
+    --navy: #220953;
+    --normal-font: "Poppins", sans-serif;
+    --gradation: -webkit-linear-gradient(0deg, #FF52AF,#9F53FF 100%);
+}
+
 body{
     background-color: #F5F0FF;
 }
-/********* Haruka Part *************/
+
+/*********** Haruka button and a tag *************/
+.all-wrap button a{
+    color: white;
+    font-family: var(--normal-font);
+}
+.all-wrap button a:link{
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.all-wrap button a:hover{
+    border-bottom: solid white 1px;
+}
+/******************************************************/
 
 .all-wrap{
     width: 85%;
-    border: solid 1px red;
     margin: 0 auto;
 }
 
 .gradation{
-    background: linear-gradient(90deg, #FF52AF,#9F53FF 100%);
-    background: -webkit-linear-gradient(0deg, #FF52AF,#9F53FF 100%);
+    background: var(--gradation);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -26,6 +45,17 @@ nav ul {
     list-style: none;
 }
 
+.top-nav ul li a:link,
+.top-nav ul li a:visited{
+    text-decoration: none;
+    color: var(--navy);
+    font-family: var(--normal-font);
+    font-size: 16px;
+}
+
+.top-nav ul li a:hover{
+    border-bottom: solid 1px var(--navy);
+}
 .checkbox{
     cursor: pointer;
     position: relative;
@@ -63,9 +93,271 @@ label .image{
 	background: url("./assets/ri_moon-line.png") no-repeat 0 0;
 	width: 24px;
 	height: 24px;
-    border: solid 1px;
 }
 
 label input:checked + .image{
 	background: url("./assets/sun.png") no-repeat 0 0;
+}
+
+h1{
+    font-family: var(--title-font);
+    font-size: 24px;
+}
+
+/*hero section*/
+.hero-title{
+    height: 395px;
+    width: 576px;
+    position: relative;
+    text-align: justify;
+}
+
+#hero h2{
+    color: var(--navy);
+    font-size: 96px;
+    display: inline-block;
+    font-weight: normal;
+    font-family: var(--title-font);
+    margin-bottom: 20px;
+    margin-top: 1em;
+    line-height: 1.1;
+}
+
+.background-on{
+    background: var(--gradation);
+    -webkit-text-fill-color: white;
+    border-radius: 16px;
+    padding: 12px 5px;
+    font-size: 90px;
+}
+
+#hero h2 .background-on{
+    position: absolute;
+    top: 51%;
+    right: 20%;
+    transform: rotate(10deg);
+}
+
+#hero p{
+    font-size: 1em;
+    color: var(--navy);
+    font-family: var(--normal-font);
+    display: block;
+    width: 417px;
+    height: 48px;
+}
+
+.hero-text{
+    margin-top: 20px;
+}
+#hero button{
+    background: var(--gradation);
+    border-radius: 64px;
+    width: 214px;
+    height: 56px;
+    border: none;
+    margin-top: 2em;
+}
+
+.big-p-hero{
+    font-size: 56px;
+    font-family: var(--title-font);
+    font-weight: 400;
+    display: block;
+}
+
+.big-p-hero p{
+    line-height: 1.1;
+}
+.small-p-hero{
+    font-size: 14px;
+    display: block;
+    margin-top: 10px;
+}
+
+.number-hero{
+    display: flex;
+    justify-content: space-between;
+    width: 290px;
+    margin-top: 48px;
+}
+
+.num-1{
+    width: 131px;
+}
+
+.num-2{
+    width: 95px;
+}
+
+.hero-all-container{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2em;
+}
+
+/************section2***************/
+.part-2-wrap{
+    margin-top: 3em;
+
+}
+.part-2-wrap h2{
+    font-size: 56px;
+    color: var(--navy);
+    text-align: center;
+    font-weight: 400;
+}
+
+.get-a-list-p p{
+    height: 72px;
+    width: 328px;
+    font-family: var(--normal-font);
+    font-size: 15px;
+    color: var(--navy);
+    position: absolute;
+    bottom: 0;
+}
+
+.get-a-list-p{
+    position: relative;
+    width: 353px;
+    height: 113px;
+}
+
+.get-a-list-p img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 64px;
+    height: 72.86px;
+}
+
+.circle-top{
+    width: 150px;
+    height: 143px;
+    position: relative;
+}
+
+.circle-next {
+    width: 64px;
+    height: 25px;
+    position: absolute;
+    top: 50%;
+    left: calc(50% - 32px);
+    margin: 0 auto;
+}
+
+.circle-next p{
+    font-size: 1em;
+    width: 64px;
+}
+
+.circle-next p:hover{
+    cursor: pointer;
+}
+
+.part-2-wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title-p3-h2{
+    width: 579px;
+    height: 164px;
+}
+
+.part-3 p{
+    width: 579px;
+    height: 49px;
+    color: var(--navy);
+    font-size: 16px;
+    font-family: var(--normal-font);
+}
+
+.part-3 button{
+    background: var(--gradation);
+    border-radius: 64px;
+    width: 163px;
+    height: 56px;
+    border: none;
+    margin-top: 2em;
+}
+
+.part-3{
+    height: 340px;
+    width: 579px;
+}
+
+.title-p3-h2 h2{
+    font-size: 56px;
+    color: var(--navy);
+    font-weight: 400;
+}
+
+.part-3-container{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 6em;
+    align-items: center;
+}
+
+.fitness-man{
+    width: 500px;
+    height: 582px;
+}
+
+.pic-p3{
+    position: relative;
+}
+
+.heart-rate-container{
+    background-color: white;
+    display: flex;
+    width: 168px;
+    height: 66px;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5em;
+    border-radius: 12px;
+    border: none;
+    position: absolute;
+    top: 10%;
+    left: 0;
+}
+
+.heart{
+    width: 50px;
+    height: 50px;
+}
+
+.heart-rate{
+    width: 86px;
+    height: 48px;
+}
+
+.heart-rate p{
+    font-family: var(--normal-font);
+    font-size: 1em;
+}
+
+.navy-p{
+    color: var(--navy);
+    font-weight: 600;
+}
+
+.free-courses-container{
+    background-color: white;
+    width: 168px;
+    height: 66px;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5em;
+    border-radius: 12px;
+    border: none;
+    font-family: var(--normal-font);
+    font-size: 1em;
+    position: absolute;
+    bottom: 30px;
+    right: 0;
 }
