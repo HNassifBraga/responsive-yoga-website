@@ -1,12 +1,298 @@
-@media screen and (max-width: 376px) {
-    *
-{
-    margin: 0;
-}
-body
-{
-    background-color: #F5F0FF;
-}
+
+/************** Media query for Mobile *******************/
+@media only screen and (max-width: 376px) {
+    .container-top{
+        height: 56px;
+        display: grid;
+        grid-template-columns: 45px 160px 24px 19px;
+        grid-template-rows: 1fr;
+        align-content: center;
+        gap: 0 .5em;
+    }
+
+    h1{
+        font-size: 24px;
+        grid-column: 1;
+        grid-row: 1;
+        line-height: 24px;
+    }
+
+    .menu-item a {
+        font-size: 0.8rem;
+        transition: all 0.3s;
+        padding: 0.5rem 0;
+        text-align: left;
+    }
+
+    #checkbox-label{ /*humburger*/
+        grid-row: 1;
+        grid-column: 4;
+    }
+
+    /*******************/
+    .p2-img{
+        width: 100%;
+        height: 100%;
+        margin-left: 2em;
+    }
+
+    .container-top:has(.checkbox-label-2 input:checked) .part-2-wrap img{
+        display: none;
+    }
+    
+    body:has(.checkbox-label-2 input:checked) .p2-img{
+        background-image: url(../assets/dark-list-box.png);
+        background-repeat: no-repeat;
+    }
+    /***************************/
+    .light-dark-check{
+        grid-row: 1;
+        grid-column: 3;
+        margin-left: 1em;
+    }
+
+    #nav-img {
+        display: block;
+    }
+
+    #nav-menu {
+        position: fixed;
+        top: 56px;
+        left: -100vw;
+        width: 100vw;
+        height: 100dvh;
+        background-color: rgba(255, 255, 255, 80%);
+        z-index: 2;
+        transition: all 0.5s;
+        display: block;
+        text-align: left;
+        padding-left: 3em;
+    }
+    
+    .container-top ul li a:link,
+    .container-top ul li a:visited{
+    font-size: 15px;
+    }
+
+.container-top ul li a:hover{
+    border-bottom: solid 1px navy;
+    }
+
+    .menu-item {
+        display: block;
+        margin: 2rem 0;
+    }
+
+    #checkbox:checked ~ #nav-menu {
+        left: 0;
+    }
+
+    .checkbox-label-2 .image{ 
+        right: 0;
+        top: 0;
+        width: 24px;
+        height: 24px;
+        background-size: contain;
+    }
+
+    .hero-all-container{
+        display: block;
+        margin: 0 auto;
+    }
+
+    .hero-title{
+        width: 284px;
+        height: 177px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    #hero h2{
+        font-size: 44px;
+        margin-top: 1em;
+        line-height: 44px;
+    }
+
+    .background-on{
+        padding: 12px 5px;
+        font-size: 44px;
+        line-height: 44px;
+        margin-top: .2em;
+        margin-left: .2em;
+    }
+   
+    #hero h2 .background-on{
+        width: 123px;
+        height: 66px;
+    }
+
+    .top-p{
+        text-align: center;
+        display: block;
+        width: 328px;
+        height: 69px;
+    }
+
+    #hero button{
+        width: 206px;
+        height: 56px;
+        border: none;
+        display: block;
+        margin: 3em auto;
+    }
+
+    .big-p-hero{
+        font-size: 36px;
+        width: 66px;
+        height: 36px;
+        margin-left: 5px;
+    }
+
+    .small-p-hero{
+        font-size: 15px;
+        margin-top: 0;
+        text-wrap: nowrap;
+        width: 78px;
+        height: 20px;
+    }
+
+    .number-hero{
+        width: 199px;
+        height: 56px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .hero-text{
+       width: 328px;
+       height: 69px;
+    }
+
+    .num-1, .num-2{
+        width: 73px;
+        height: 56px;
+        text-align: center;
+    }
+    
+    .part-2-wrap{
+        width: 328px;
+        flex-wrap: wrap;
+        gap: 1em;
+        justify-content: center;
+    }
+
+    .p2-img{
+        width: 100%;
+        height: 100%;
+        margin-left: 0 auto;
+    }
+
+    .hero-img-top img{
+        width: 320px;
+        height: 427.84px;
+        margin-top: 3em;
+    }
+
+    .part-2-wrap h2{
+        font-size: 28px;
+        font-weight: 400;
+    }
+
+    .posing-pic-p2{
+        width: 230px;
+        height: 125px;
+    }
+
+    /********** part-3 **************/
+    .part-3-container{/*kaeru*/
+        display: flex;
+        justify-content: center;
+        margin-top: 6em;
+        align-items: center;
+        width: 320px;
+        flex-wrap: wrap;
+    }
+
+    .fitness-man{
+        width: 320px;
+        height: 372.48px;
+    }
+
+    .pic-p3{
+        order: 2;
+    }
+
+    .part-3{
+        order: 1;
+    }
+
+    .title-p3-h2{
+        width: 289px;
+        height: 32px;
+    }
+
+    .title-p3-h2 h2{
+        font-size: 2em;
+        text-align: center;
+    }
+
+    .part-3 p{
+        width: 331px;
+        height: 69px;
+        font-size: 15px;
+        margin-top: 5em;
+        text-align: center;
+    }
+
+    .part-3 button{
+        width: 158px;
+        margin: 2em auto;
+    }
+
+    .btn-p3{
+        text-align: center;
+    }
+
+    .heart-rate-container{
+        width: 138px;
+        height: 54px;
+    }
+    
+    .heart{
+        width: 24px;
+        height: 24px;
+    }
+    
+    .heart-rate{
+        width: 70px;
+        height: 38px;
+    }
+    
+    .heart-rate p{
+        font-family: var(--normal-font);
+        font-size: 12px;
+    }
+
+    .free-courses-container{
+        width: 109px;
+        height: 54px;
+        font-size: 12px;
+        padding: .6em;
+    }
+
+    /*************** dark mode *********************/   
+    .p2-img{
+        width: 230px;
+        height: 125px;
+        margin-left: 0;
+    }
+    
+    body:has(.checkbox-label-2 input:checked) .p2-img{
+        background-image: url(../assets/dark-list-box.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+/*henrique*/
 .anytime-conteiner
 {
     display: grid;
@@ -378,7 +664,9 @@ body
 {
     grid-area: 8/1/9/2;
     place-self: center  ;
-    margin:  1rem 0 0 0.2rem;
+    margin:  1rem 0 1rem 0.2rem;
     font-size: smaller;
+    padding: 1rem 0;
 }
+
 }
