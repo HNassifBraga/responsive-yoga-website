@@ -19,31 +19,36 @@
     .menu-item a {
         font-size: 0.8rem;
         transition: all 0.3s;
-        padding: 0.5rem 0;
+        padding: 3rem 0;
         text-align: left;
+        margin-top: 3em;
     }
 
-    #checkbox-label{ /*humburger*/
-        grid-row: 1;
-        grid-column: 4;
+    #nav-menu > li {
+        margin: 2rem 0;
+        padding: 1rem 0;
     }
 
-    /*******************/
+    .abc{
+        background-image: url(../assets/dots.png);
+        display: block;
+        width: 25px;
+        height: 25px;
+        background-repeat: none;
+        background-size: cover;
+        position: absolute;
+        top: 1em;
+        right: 1.2em;
+    }
+
+   /*******************/
     .p2-img{
         width: 100%;
         height: 100%;
         margin-left: 2em;
     }
-
-    .container-top:has(.checkbox-label-2 input:checked) .part-2-wrap img{
-        display: none;
-    }
-    
-    body:has(.checkbox-label-2 input:checked) .p2-img{
-        background-image: url(../assets/dark-list-box.png);
-        background-repeat: no-repeat;
-    }
-    /***************************/
+     
+   /***************************/
     .light-dark-check{
         grid-row: 1;
         grid-column: 3;
@@ -60,7 +65,7 @@
         left: -100vw;
         width: 100vw;
         height: 100dvh;
-        background-color: rgba(255, 255, 255, 80%);
+        background-color: rgba(255, 255, 255, 100%);
         z-index: 2;
         transition: all 0.5s;
         display: block;
@@ -68,18 +73,18 @@
         padding-left: 3em;
     }
     
-    .container-top ul li a:link,
-    .container-top ul li a:visited{
+    .container-top ul li a:link{
     font-size: 15px;
+    margin-top: 5em;
     }
 
-.container-top ul li a:hover{
+    .container-top ul li a:hover{
     border-bottom: solid 1px navy;
     }
 
     .menu-item {
         display: block;
-        margin: 2rem 0;
+        margin: 4rem 0;
     }
 
     #checkbox:checked ~ #nav-menu {
@@ -291,4 +296,14 @@
         background-repeat: no-repeat;
         background-size: contain;
     }
+
+    body:has(.checkbox-label-2 input:checked) .abc {
+        background-image: url("../assets/dark-dots.png");
+    }
+
+    body:has(.checkbox-label-2 input:checked) #nav-menu{
+        background-color: #1A1A1A;
+    }
+
+    
 }

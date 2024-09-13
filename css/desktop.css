@@ -58,7 +58,7 @@ body{
     justify-content: space-between;
     align-items: center;
     height: 88px;
-    grid-template-columns: 54px 540px 502px 24px;
+    grid-template-columns: 1fr 540px auto 54px;/*54px 540px 502px 24px;*/
     grid-template-rows: 1fr;
 }
 
@@ -67,29 +67,36 @@ body{
     grid-column: 1;
 }
 
-#nav-menu{
+.top--menu{
     grid-row: 1;
-    grid-column: 3;
-    display: flex;
+    grid-column: 2;
     justify-content: space-between;
 }
 
+#nav-menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#nav-menu > li{
+    overflow: hidden;
+    margin: 0 1.5rem;
+}
 .light-dark-check{
     grid-row: 1;
     grid-column: 4;
 
 }
 
-.menu-item {
+/*.menu-item {
     display: inline-block;
-}
+}*/
 
 .menu-item a{
     padding: 0.5rem 0;
 }
 
-.container-top ul li a:link,
-.container-top ul li a:visited{
+.container-top ul li a:link{
     text-decoration: none;
     color: var(--navy);
     font-family: var(--normal-font);
@@ -100,33 +107,13 @@ body{
     border-bottom: solid 1px white;
 }
 
-/* Hamburger Button Styles */
-#checkbox {
+#checkbox{
     display: none;
 }
 
-#checkbox-label {
-    cursor: pointer;
-}
 
-#nav-img {
-    display: none;
-    width: 1.5rem;
-    fill: var(--contrast-color);
-}
 
-.visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    padding: 0;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0;
-    /* hide element visually without affecting DOM layout */
-    /* remaining accessible to screen readers and assistive technologies */
-}
+/*********** dark light mode button ***************/
 
 .checkbox-label-2{ 
 	position: relative;
@@ -140,8 +127,8 @@ body{
 
 .checkbox-label-2 .image{ 
 	position: absolute;
-	right: 0;
-	top: 4.5%;
+	right: -1em;
+	top: -.4em;
 	display: inline-block;
 	background: url("../assets/ri_moon-line.png") no-repeat 0 0;
 	width: 24px;
