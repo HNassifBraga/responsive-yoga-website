@@ -4,7 +4,8 @@ Showcasing what we have learned about web development by recreating the website 
 
 ## Team Member
 
-Haruka (from header to "Bring Happiness To Good Health!" section)
+Haruka (from header to "Bring Happiness To Good Health!" section)   
+
 Henrique (from "Anytime, Any Place, Any Workout" section to footer)
 
 ## Copy right
