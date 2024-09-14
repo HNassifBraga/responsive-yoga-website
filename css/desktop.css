@@ -1,4 +1,4 @@
-
+/*ダークモード確認、文字色確認*/
 *{
     box-sizing: border-box;
     padding: 0;
@@ -12,6 +12,7 @@
     --gradation: -webkit-linear-gradient(0deg, #FF52AF,#9F53FF 100%);
     --dark-title: #D1C0F1;
     --dark-text: #A094B8;
+    --normal-color: #4B3E65;
 }
 
 body{
@@ -63,11 +64,14 @@ body{
     grid-column: 1;
 }
 
+.top--menu{
+    margin-left: 100%;
+}
+
 #nav-menu{
-    grid-row: 1;
-    grid-column: 3;
     display: flex;
     justify-content: space-between;
+    width: 500px;
 }
 
 .light-dark-check{
@@ -161,6 +165,18 @@ h1{
     text-align: justify;
 }
 
+.hero-title .star{
+    position: absolute;
+    top: 60%;
+    right: 0;
+}
+
+.hero-title .circle{
+    position: absolute;
+    bottom: -15%;
+    left: -5%;
+}
+
 #hero h2{
     color: var(--navy);
     font-size: 96px;
@@ -191,7 +207,7 @@ h1{
 }
 
 .top-p{
-    color: var(--navy);
+    color: var(--normal-color);
     font-family: var(--normal-font);
     display: block;
     width: 417px;
@@ -278,7 +294,7 @@ h1{
     width: 328px;
     font-family: var(--normal-font);
     font-size: 15px;
-    color: var(--navy);
+    color: var(--normal-color);
     position: absolute;
     bottom: 0;
 }
@@ -292,7 +308,7 @@ h1{
 .get-a-list-p img{
     position: absolute;
     top: 0;
-    left: 0;
+    left: -8%;
     width: 64px;
     height: 72.86px;
 }
@@ -330,7 +346,7 @@ h1{
 .part-3 p{
     width: 579px;
     height: 49px;
-    color: var(--navy);
+    color: var(--normal-color);
     font-size: 16px;
     font-family: var(--normal-font);
 }
@@ -427,6 +443,10 @@ h1{
 }
 
 /**************** dark mode ********************/
+body:has(.checkbox-label-2 input:checked) .join-our-newsletter-conteiner1 h2{
+    color: white;
+}
+
 .p2-img{
     width: 400px;
     height: 230px;
@@ -461,7 +481,8 @@ body:has(.checkbox-label-2 input:checked) .menu-item a{
     display: grid;
     grid-template-columns: repeat(2,1fr);
     grid-template-rows: repeat(4,1fr);
-    margin: 0 0 0 4rem;
+    margin-left: 0 0 0 4rem;
+    width: 80%;
 }
 .anytime-conteiner1
 {
@@ -474,6 +495,8 @@ body:has(.checkbox-label-2 input:checked) .menu-item a{
     margin: 0 7rem 0 7rem ;
     font-size: 2.5rem;
     color: #220953;
+    font-family: var(--title-font);
+    font-weight: 400;
 }
 .anytime-conteiner2
 {
@@ -482,6 +505,12 @@ body:has(.checkbox-label-2 input:checked) .menu-item a{
 .anytime-conteiner2-1
 {
     margin: 0 10rem 0 8rem;
+    font-family: var(--normal-font);
+    color: var(--normal-color);
+}
+
+body:has(.checkbox-label-2 input:checked) .anytime-conteiner2 p{
+    color: var(--dark-text);
 }
 .anytime-conteiner3
 {
@@ -514,6 +543,12 @@ body:has(.checkbox-label-2 input:checked) .menu-item a{
     width: 20rem;
     height: auto;
 }
+.any-5{
+    position: absolute;
+    top: 270%;
+    right: 25%;
+    z-index: 6;
+}
 .anytime-conteiner5
 {
     display: grid;
@@ -523,6 +558,7 @@ body:has(.checkbox-label-2 input:checked) .menu-item a{
     place-self: end center;
     margin: 0 0 4rem 0 ;
     z-index: 2;
+    background-color: white;/**/
 }
 .anytime-conteiner5-1
 {
@@ -531,7 +567,6 @@ body:has(.checkbox-label-2 input:checked) .menu-item a{
     z-index: 2;
     margin: 0 0 0 0.5rem;
     border-radius: 0.5rem;
-    background-color: white;
     padding: 0.5rem;
 }
 .anytime-conteiner5-1-1
@@ -546,10 +581,9 @@ body:has(.checkbox-label-2 input:checked) .menu-item a{
 }
 .anytime-conteiner5-2
 {
-    padding: 0.6rem;
+    padding: 0rem;
     border-radius: 0.5rem;
     grid-area: 1/2/2/3;
-    background-color: white;
     align-self: center;
 }
 .anytime-conteiner5-2-1
@@ -558,6 +592,13 @@ body:has(.checkbox-label-2 input:checked) .menu-item a{
     background: linear-gradient(to right, #ff4a8d, #8452f6); 
     -webkit-background-clip: text; 
     color: transparent; 
+    font-family: var(--normal-font);
+    font-size: 16px;
+    text-wrap: nowrap;
+}
+
+h2{
+    z-index: 99;
 }
 .anytime-conteiner6
 {
@@ -570,6 +611,7 @@ body:has(.checkbox-label-2 input:checked) .menu-item a{
     z-index: 1;
     display: grid;
     grid-template-columns: 1rem 10rem;
+    grid-template-rows: 1fr;
     border-radius: 0.5rem;
     margin: 0 0 1rem 0;
     z-index: 2;
@@ -580,10 +622,10 @@ body:has(.checkbox-label-2 input:checked) .menu-item a{
     border-radius: 50%;
     place-self: center;
     z-index: 2;
-    margin: 0 0 0 0.5rem;
+    margin: 0;
     border-radius: 0.5rem;
     background-color: white;
-    padding: 0.5rem;
+    padding: 0.68rem;
 }
 .anytime-conteiner7-1-1
 {
@@ -605,10 +647,13 @@ body:has(.checkbox-label-2 input:checked) .menu-item a{
 }
 .anytime-conteiner7-2-1
 {
-    margin: 0 0 0 0.5rem;
+    margin: 0 0 0 0.3rem;
     background: linear-gradient(to right, #ff4a8d, #8452f6); 
     -webkit-background-clip: text; 
-    color: transparent; 
+    color: transparent;
+    font-family: var(--normal-font); 
+    font-size: 14px;
+    text-wrap: nowrap;
 }
 
 .anytime-conteiner-img2
@@ -622,6 +667,7 @@ body:has(.checkbox-label-2 input:checked) .menu-item a{
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: repeat(2,1fr);
     margin: 3rem;
+    width: 80%;
 }
 .follow-us-conteiner1
 {
@@ -642,7 +688,12 @@ body:has(.checkbox-label-2 input:checked) .menu-item a{
     display: grid;
     grid-area: 1/1/2/2;
     font-size: xx-large;
-    color: #220953;
+}
+
+.follow-us-conteiner2-1-1{
+    font-family: var(--title-font);
+    font-weight: 400;
+    color: var(--navy);
 }
 .follow-us-conteiner2-2
 {
@@ -671,10 +722,10 @@ body:has(.checkbox-label-2 input:checked) .menu-item a{
     border: 0   ;
     background: linear-gradient(to right, #ff4a8d, #8452f6); 
 }
-.follow-us-conteiner2-3-2
-{
-    font-size: x-large;
+.follow-us-conteiner2-3-1 pre{
+    font-family: var(--normal-font);
 }
+
 .follow-us-conteiner3
 {
     grid-area: 1/2/2/4;
@@ -689,6 +740,7 @@ body:has(.checkbox-label-2 input:checked) .menu-item a{
 {
     grid-area: 2/2/3/3;
     margin:0 0 0 11rem;
+    width: 230px;
 }
 .join-our-newsletter-conteiner
 {
@@ -696,19 +748,35 @@ body:has(.checkbox-label-2 input:checked) .menu-item a{
     display: grid;
     margin: 3rem 6rem 3rem 6rem;
     grid-template-rows: repeat(3,1fr);
+    grid-template-columns: 1fr;
     color: white;
-    padding: 5rem 0;
+    padding: 1rem 0;
     font-size: larger;
     border-radius: 3rem;
+    gap: 0.5em;
 }
 .join-our-newsletter-conteiner1
 {
     display: grid ;
     place-self: center;
 }
+
+.join-our-newsletter-conteiner1 h2{
+    font-family: var(--title-font);
+    font-size: 2em;
+    font-weight: 400;
+}
 .join-our-newsletter-conteiner2
 {
     place-self: center;
+}
+
+.join-our-newsletter-conteiner2 p{
+    width: 80%;
+    text-align: center;
+    font-family: var(--normal-font);
+    font-size: 15px;
+    margin: 0 auto;
 }
 .join-our-newsletter-conteiner3
 {
@@ -736,6 +804,7 @@ body:has(.checkbox-label-2 input:checked) .menu-item a{
     padding: 0.8rem;
     color: white;
     border: 0;
+    font-family: var(--normal-font);
 }
 .footer-conteiner
 {
@@ -752,14 +821,13 @@ body:has(.checkbox-label-2 input:checked) .menu-item a{
     grid-area: 1/1/2/2;
     margin:0  0 0 3rem;
 }
-.footer-conteiner1-1
-{
-    font-size: 1rem; 
-    font-weight: bold; 
-    background: linear-gradient(to right, #ff4a8d,  #8452f6);
-    -webkit-background-clip: text; 
-    color: transparent; 
-    background-size: 200%;
+
+.yoga-text {
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
 }
       
 .footer-conteiner2
@@ -782,7 +850,7 @@ body:has(.checkbox-label-2 input:checked) .menu-item a{
 .footer-conteiner6
 {
     grid-area: 2/1/3/6;
-    background-color:white;
+    background-color: #A197B4;
     height:0.1rem;
     margin:0 3rem 0 3rem;
 }
@@ -802,4 +870,31 @@ body:has(.checkbox-label-2 input:checked) .menu-item a{
     font-size: smaller;
     
 }
+
+.footer-conteiner p{
+    font-family: var(--normal-font);
+    color: #A197B4;
+    font-size: 15px;
+}
+.footer-conteiner h3{
+    font-family: var(--title-font);
+    font-size: 1.2em;
+    font-weight: 400;
+}
+
+body:has(.checkbox-label-2 input:checked) .anytime-conteiner2-1,
+body:has(.checkbox-label-2 input:checked) .join-our-newsletter-conteiner1{
+    color: white;
+}
+
+.center{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+}
+
+
 
